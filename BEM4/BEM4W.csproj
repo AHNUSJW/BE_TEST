@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6C0EA0A4-69A8-48FD-A495-4F5E95DDAE40}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BEM4W</RootNamespace>
+    <AssemblyName>BEM4W</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>BEM4.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.License, Version=1.3.8.40, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=6.9.16.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataPicture.cs" />
+    <Compile Include="DPTable.cs" />
+    <Compile Include="DataTable.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="FireWallHelp.cs" />
+    <Compile Include="MenuDataSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuDataSettingForm.Designer.cs">
+      <DependentUpon>MenuDataSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAccountForm.Designer.cs">
+      <DependentUpon>MenuAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuConfigureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuConfigureForm.Designer.cs">
+      <DependentUpon>MenuConfigureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuConnectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuConnectForm.Designer.cs">
+      <DependentUpon>MenuConnectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuCalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuCalForm.Designer.cs">
+      <DependentUpon>MenuCalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuExportReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuExportReportForm.Designer.cs">
+      <DependentUpon>MenuExportReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuRunForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuRunForm.Designer.cs">
+      <DependentUpon>MenuRunForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuFactForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuFactForm.Designer.cs">
+      <DependentUpon>MenuFactForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAboutBox.Designer.cs">
+      <DependentUpon>MenuAboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuDataProcessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuDataProcessForm.Designer.cs">
+      <DependentUpon>MenuDataProcessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBoxEX.cs" />
+    <Compile Include="MyDataExporter.cs" />
+    <Compile Include="MyDefine.cs" />
+    <Compile Include="MySettingsManager.cs" />
+    <Compile Include="Picture.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WifiName.cs" />
+    <Compile Include="WRE.Define.cs" />
+    <Compile Include="WRE.Function.cs" />
+    <Compile Include="UIT.Define.cs" />
+    <Compile Include="UIT.Function.cs" />
+    <Compile Include="XET.COM.cs" />
+    <Compile Include="XET.Crc.cs" />
+    <Compile Include="XET.Define.cs" />
+    <Compile Include="XET.Function.cs" />
+    <Compile Include="XET.Net.cs" />
+    <EmbeddedResource Include="MenuDataSettingForm.resx">
+      <DependentUpon>MenuDataSettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.en.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAboutBox.en.resx">
+      <DependentUpon>MenuAboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAccountForm.en.resx">
+      <DependentUpon>MenuAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAccountForm.resx">
+      <DependentUpon>MenuAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuCalForm.en.resx">
+      <DependentUpon>MenuCalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuConfigureForm.en.resx">
+      <DependentUpon>MenuConfigureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuConfigureForm.resx">
+      <DependentUpon>MenuConfigureForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuConnectForm.en.resx">
+      <DependentUpon>MenuConnectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuConnectForm.resx">
+      <DependentUpon>MenuConnectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuCalForm.resx">
+      <DependentUpon>MenuCalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuDataProcessForm.en.resx">
+      <DependentUpon>MenuDataProcessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuExportReportForm.en.resx">
+      <DependentUpon>MenuExportReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuExportReportForm.resx">
+      <DependentUpon>MenuExportReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuFactForm.en.resx">
+      <DependentUpon>MenuFactForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuRunForm.en.resx">
+      <DependentUpon>MenuRunForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuRunForm.resx">
+      <DependentUpon>MenuRunForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuFactForm.resx">
+      <DependentUpon>MenuFactForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAboutBox.resx">
+      <DependentUpon>MenuAboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuDataProcessForm.resx">
+      <DependentUpon>MenuDataProcessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BEM4.ico" />
+    <None Include="Resources\bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="NetFwTypeLib">
+      <Guid>{58FBCF7C-E7A9-467C-80B3-FC65E8FCCA08}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
